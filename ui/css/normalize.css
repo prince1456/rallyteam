@@ -24,20 +24,18 @@ html {
 
 body {
   margin: 0;
+  background-color: #F2F2F4;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 /**
  * Add the correct display in IE 9-.
  */
 
-article,
-aside,
-footer,
-header,
-nav,
-section {
-  display: block;
-}
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
@@ -77,8 +75,9 @@ figure {
  */
 
 hr {
+background-color: red;
   box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
+  height: 1; /* 1 */
   overflow: visible; /* 2 */
 }
 

@@ -1,0 +1,120 @@
+nav{
+  width: 100%;
+  padding-right: 50px;
+  padding-left: 50px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo h2{
+  padding-left: 50px;
+  color: gray;
+  font-size: 35px
+}
+.logo span{
+  color: red;
+}
+.container{
+  margin-right: 50px;
+  margin-left: 50px
+}
+.main-nav{
+  flex-direction: row;
+  display: flex;
+  list-style-type: none;
+}
+
+.main-nav li{
+  padding-right: 50px
+}
+.main-nav li a{
+  text-decoration: none;
+  color: darkgrey;
+}
+.last-nav-element{
+  justify-content: flex-end;
+  align-self: center;
+}
+.second-nav{
+  flex-direction: row;
+  display: flex;
+  list-style-type: none;
+
+}
+
+.second-nav li{
+  padding-right: 20px
+}
+.second-nav li a{
+  text-decoration: none;
+  color: darkgrey;
+}
+.second-nav li button{
+
+  border: 2px solid black;
+  background-color: white;
+  width: 100px;
+  height:30px
+}
+header{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px solid darkgrey;
+  margin-bottom: 50px
+}
+
+.header-form{
+  padding: 15px;
+  width: 100%;
+  background-color:white;
+}
+
+.header-form input[type=text] {
+    width: 80%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    padding: 12px 20px 12px 40px;
+    margin-right: 0px
+}
+.header-form button{
+  border-radius: 4px;
+  text-align: center;
+  border: none;
+  color: white;
+  margin-left: 0px;
+  width: 18%;
+  background-color: #00BC98;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.header-nav{
+  align-self: flex-start;
+  display: flex;
+  justify-content: flex-start;
+}
+.header-nav ul{
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+.header-nav ul li{
+  color: darkgray;
+  font-size: 30px;
+  padding-right: 50px
+
+}
+.hr{
+  width: 100%
+  background-color: 1px;
+}
