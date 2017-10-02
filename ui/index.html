@@ -1,189 +1,199 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Rally team</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  </head>
-  <body>
-    <nav>
-        <div class="logo">
-          <h2>your <span>logo</span></h2>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rally team</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <h2>your <span>logo</span></h2>
+    </div>
+    <div class="navigation-container">
+      <ul class="main-nav">
+        <li><a href="#"> MARKETPLACE</a></li>
+        <li><a href="#"> DIRECTORY</a></li>
+        <li><a href="#"> MY WORKPLACE</a></li>
+      </ul>
+    </div>
+    <div class="last-nav-element">
+      <ul class="second-nav">
+        <li><button>Create</button></li>
+        <li><i class="fa fa-bell" aria-hidden="true"></i></li>
+        <li><i class="fa fa-commenting" aria-hidden="true"></i></li>
+        <li><i class="fa fa-user-circle-o" aria-hidden="true"></i></li>
+      </ul>
+    </div>
+  </nav>
+  <header>
+    <div class="header-form">
+      <form class="" action="index.html" method="post">
+        <input type="text" name="" value="" placeholder="what kind of oppurtunity you are looking for?">
+        <button type="button" name="button">Search</button>
+      </form>
+    </div>
+    <div class="header-nav">
+      <ul>
+        <li class="active">PROJECTS</li>
+        <li>JOBS</li>
+      </ul>
+    </div>
+
+  </header>
+  <article>
+    <div class="sidebar">
+      <h2>Filters</h2>
+      <form action="">
+        <label for="">Show Me</label>
+        <select class="" name="">
+            <option value="" selected>All Open Projects</option>
+            <option value="">something</option>
+            <option value="">something2</option>
+          </select>
+        <label for="">Category</label>
+        <select class="" name="">
+            <option value="">All Categories</option>
+            <option value="">something</option>
+            <option value="">something2</option>
+          </select>
+        <label for="">All Projects</label>
+        <select class="" name="">
+            <option value="">All Projects</option>
+            <option value="">something2</option>
+            <option value="">something2</option>
+          </select>
+        <label for="">LOCATION</label>
+        <input type="text" name="" id="" placeholder="Enter Location">
+        <label for="">Staffing Need</label>
+        <div>
+          <input type="checkbox" name="" value=""> On Site
         </div>
         <div>
-          <ul class="main-nav">
-              <li><a href="#"> MARKETPLACE</a></li>
-              <li><a href="#"> DIRECTORY</a></li>
-              <li><a href="#"> MY WORKPLACE</a></li>
-          </ul>
-      </div>
-      <div class="last-nav-element">
-          <ul class="second-nav">
-            <li><button>Create</button></li>
-            <li><i class="fa fa-bell" aria-hidden="true"></i></li>
-            <li><i class="fa fa-commenting" aria-hidden="true"></i></li>
-            <li><i class="fa fa-user-circle-o" aria-hidden="true"></i></li>
-          </ul>
-      </div>
-    </nav>
-    <header>
-      <div class="header-form">
-        <form class="" action="index.html" method="post">
-          <input type="text" name="" value="" placeholder="what kind of oppurtunity you are looking for?">
-          <button type="button" name="button">Search</button>
-        </form>
-      </div>
-      <div class="header-nav">
-          <ul>
-            <li>PROJECTS</li>
-            <li>JOBS</li>
+          <input type="checkbox" name="" value="" checked> Remote
+        </div>
+        <label for="">Hours Per week</label>
+        <select class="" name="" placeholder="Select">
+            <option value="">something</option>
+            <option value="">something2</option>
+          </select>
+        <button class="sidebar-buttom"> Reset</button>
+      </form>
+    </div>
+    <div class="content">
+      <div class="column">
+        <div class="content-image">
+          <img src="./images/image-1.jpg" alt="">
+          <span>something</span>
+        </div>
+        <h4>Intern Onbording and Training</h4>
+        <p>75% Match</p>
+        <ul>
+          <li><i class="fa fa-bookmark" aria-hidden="true"></i>Engineering</li>
+          <li><i class="fa fa-map-marker" aria-hidden="true"></i>Location</li>
+          <li><i class="fa fa-home" aria-hidden="true"></i>On-Site</li>
         </ul>
       </div>
-      
-    </header>
-    <content>
-      <div>
-        <form action="">
-          <label for="">Show Me</label>
-          <select class="" name="" placeholder="All Open Projects">
-            <option value="">something</option>
-            <option value="">something2</option>
-          </select>
-          <label for="">Category</label>
-          <select class="" name="" placeholder="All Categories">
-            <option value="">something</option>
-            <option value="">something2</option>
-          </select>
-          <label for="">All Projects</label>
-          <select class="" name="" placeholder="All Projects">
-            <option value="">something</option>
-            <option value="">something2</option>
-          </select>
-          <label for="">LOCATION</label>
-          <input type="text" name="" id="" placeholder="Enter Location">
-          <label for="">Staffing Need</label>
-          <input type="checkbox" name="" value=""> On Site<br>
-          <input type="checkbox" name="" value="" checked> Remote
-          <label for="">Hours Per week</label>
-          <select class="" name="" placeholder="Select">
-            <option value="">something</option>
-            <option value="">something2</option>
-          </select>
-          <button></button>
-        </form>
-      </div>
-      <div>
-        <div class="row">
-          <div class="column">
-            <div class="image">
-              <img src="" alt="">
-              <span>something</span>
-            </div>
-            <h3>Intern Onbording and Training</h3>
-            <p>75% Match</p>
-            <ul>
-              <li><i class="fa fa-bookmark" aria-hidden="true"> Engineering</i></li>
-              <li><i class="fa fa-map-marker" aria-hidden="true">Location</i></li>
-              <li><i class="fa fa-home" aria-hidden="true">On-Site</i></li>
-            </ul>
-          </div>
-          <div class="column">
-            <div class="image">
-              <img src="" alt="">
-              <span>something</span>
-            </div>
-            <h3>Intern Onbording and Training</h3>
-            <p>75% Match</p>
-            <ul>
-              <li><i class="fa fa-bookmark" aria-hidden="true"> Engineering</i></li>
-              <li><i class="fa fa-map-marker" aria-hidden="true">Location</i></li>
-              <li><i class="fa fa-home" aria-hidden="true">On-Site</i></li>
-            </ul>
-          </div>
-          <div class="column">
-            <div class="image">
-              <img src="" alt="">
-              <span>something</span>
-            </div>
-            <h3>Intern Onbording and Training</h3>
-            <p>75% Match</p>
-            <ul>
-              <li><i class="fa fa-bookmark" aria-hidden="true"> Engineering</i></li>
-              <li><i class="fa fa-map-marker" aria-hidden="true">Location</i></li>
-              <li><i class="fa fa-home" aria-hidden="true">On-Site</i></li>
-            </ul>
-          </div>
-          <div class="column">
-            <div class="image">
-              <img src="" alt="">
-              <span>something</span>
-            </div>
-            <h3>Intern Onbording and Training</h3>
-            <p>75% Match</p>
-            <ul>
-              <li><i class="fa fa-bookmark" aria-hidden="true"> Engineering</i></li>
-              <li><i class="fa fa-map-marker" aria-hidden="true">Location</i></li>
-              <li><i class="fa fa-home" aria-hidden="true">On-Site</i></li>
-            </ul>
-          </div>
+      <div class="column">
+        <div class="content-image">
+          <img src="./images/image-1.jpg" alt="">
+          <span>something</span>
         </div>
-        <div class="row">
-          <div class="column">
-            <div class="image">
-              <img src="" alt="">
-              <span>something</span>
-            </div>
-            <h3>Intern Onbording and Training</h3>
-            <p>75% Match</p>
-            <ul>
-              <li><i class="fa fa-bookmark" aria-hidden="true"> Engineering</i></li>
-              <li><i class="fa fa-map-marker" aria-hidden="true">Location</i></li>
-              <li><i class="fa fa-home" aria-hidden="true">On-Site</i></li>
-            </ul>
-          </div>
-          <div class="column">
-            <div class="image">
-              <img src="" alt="">
-              <span>something</span>
-            </div>
-            <h3>Intern Onbording and Training</h3>
-            <p>75% Match</p>
-            <ul>
-              <li><i class="fa fa-bookmark" aria-hidden="true"> Engineering</i></li>
-              <li><i class="fa fa-map-marker" aria-hidden="true">Location</i></li>
-              <li><i class="fa fa-home" aria-hidden="true">On-Site</i></li>
-            </ul>
-          </div>
-          <div class="column">
-            <div class="image">
-              <img src="" alt="">
-              <span>something</span>
-            </div>
-            <h3>Intern Onbording and Training</h3>
-            <p>75% Match</p>
-            <ul>
-              <li><i class="fa fa-bookmark" aria-hidden="true"> Engineering</i></li>
-              <li><i class="fa fa-map-marker" aria-hidden="true">Location</i></li>
-              <li><i class="fa fa-home" aria-hidden="true">On-Site</i></li>
-            </ul>
-          </div>
-          <div class="column">
-            <div class="image">
-              <img src="" alt="">
-              <span>something</span>
-            </div>
-            <h3>Intern Onbording and Training</h3>
-            <p>75% Match</p>
-            <ul>
-              <li><i class="fa fa-bookmark" aria-hidden="true"> Engineering</i></li>
-              <li><i class="fa fa-map-marker" aria-hidden="true">Location</i></li>
-              <li><i class="fa fa-home" aria-hidden="true">On-Site</i></li>
-            </ul>
-          </div>
-        </div>
+        <h4>Intern Onbording and Training</h4>
+        <p>75% Match</p>
+        <ul>
+          <li><i class="fa fa-bookmark" aria-hidden="true"></i>Engineering</li>
+          <li><i class="fa fa-map-marker" aria-hidden="true"></i>Location</li>
+          <li><i class="fa fa-home" aria-hidden="true"></i>On-Site</li>
+        </ul>
       </div>
-    </content>
-  </body>
+      <div class="column">
+        <div class="content-image">
+          <img src="./images/image-1.jpg" alt="">
+          <span>something</span>
+        </div>
+        <h4>Intern Onbording and Training</h4>
+        <p>75% Match</p>
+        <ul>
+          <li><i class="fa fa-bookmark" aria-hidden="true"></i>Engineering</li>
+          <li><i class="fa fa-map-marker" aria-hidden="true"></i>Location</li>
+          <li><i class="fa fa-home" aria-hidden="true"></i>On-Site</li>
+        </ul>
+      </div>
+      <div class="column">
+        <div class="content-image">
+          <img src="./images/image-1.jpg" alt="">
+          <span>something</span>
+        </div>
+        <h4>Intern Onbording and Training</h4>
+        <p>75% Match</p>
+        <ul>
+          <li><i class="fa fa-bookmark" aria-hidden="true"></i>Engineering</li>
+          <li><i class="fa fa-map-marker" aria-hidden="true"></i>Location</li>
+          <li><i class="fa fa-home" aria-hidden="true"></i>On-Site</li>
+        </ul>
+      </div>
+
+
+      <div class="column">
+        <div class="content-image">
+          <img src="./images/image-1.jpg" alt="">
+          <span>something</span>
+        </div>
+        <h4>Intern Onbording and Training</h4>
+        <p>75% Match</p>
+        <ul>
+          <li><i class="fa fa-bookmark" aria-hidden="true"></i>Engineering</li>
+          <li><i class="fa fa-map-marker" aria-hidden="true"></i>Location </li>
+          <li><i class="fa fa-home" aria-hidden="true"></i>On-Site</li>
+        </ul>
+      </div>
+      <div class="column">
+        <div class="content-image">
+          <img src="./images/image-1.jpg" alt="">
+          <span>something</span>
+        </div>
+        <h4>Intern Onbording and Training</h4>
+        <p>75% Match</p>
+        <ul>
+          <li><i class="fa fa-bookmark" aria-hidden="true"></i>Engineering</li>
+          <li><i class="fa fa-map-marker" aria-hidden="true"></i>Location</li>
+          <li><i class="fa fa-home" aria-hidden="true"></i>On-Site</li>
+        </ul>
+      </div>
+      <div class="column">
+        <div class="content-image">
+          <img src="./images/image-1.jpg" alt="Mew">
+          <span>something</span>
+        </div>
+        <h4>Intern Onbording and Training</h4>
+        <p>75% Match</p>
+        <ul>
+          <li><i class="fa fa-bookmark" aria-hidden="true"> </i>Engineering</li>
+          <li><i class="fa fa-map-marker" aria-hidden="true"></i>Location</li>
+          <li><i class="fa fa-home" aria-hidden="true"></i>On-Site</li>
+        </ul>
+      </div>
+      <div class="column">
+        <div class="content-image">
+          <img src="./images/image-1.jpg" alt="">
+          <span>something</span>
+        </div>
+        <h4>Intern Onbording and Training</h4>
+        <p>75% Match</p>
+        <ul>
+          <li><i class="fa fa-bookmark" aria-hidden="true"></i> Engineering</li>
+          <li><i class="fa fa-map-marker" aria-hidden="true"></i>Location</li>
+          <li><i class="fa fa-home" aria-hidden="true"></i>On-Site</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+</body>
+
 </html>
