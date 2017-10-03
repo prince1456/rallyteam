@@ -1,10 +1,10 @@
 class HomeController < ApplicationController
   def index
     client = Twitter::REST::Client.new do |config|
-      config.consumer_key        = 'L4T4aeAjSGPdpZcXRxx5cx7F6'
-      config.consumer_secret     = 'VRZK4RAz9z6n5awvTyzfJKgCJPoDia4tMLzmNGo4BbWKUoKqqX'
-      config.access_token        = '3142978772-AdkoNdqYL9knmJCP7HpIyh6HNk8IhnEAym6cSXk'
-      config.access_token_secret = 'OK9h4NtxSvLtlcUW46RAurFw0AmeSpWlKbAsuBrRtwm1z'
+      config.consumer_key        = '31331231dsasafasf'
+      config.consumer_secret     = 'VRZK41312331312RAz9z6n5awvTyzfJKgCJPoDia4tMLzdasdasdmNGo4BbWKUoKqqX'
+      config.access_token        = '3142faf1213978772-AdkoNdqYL9knmJCP7HpIyhdasdasda6HNk8IhnEAym6cSXk'
+      config.access_token_secret = 'OK9hfafasf4NtxSvLtlcUW46RAurFw0AmeSpWldasdasdasKbAsuBrRtwm1z'
     end
     if params[:search]
       @twitts = client.search("#{params[:search]} -rtfilter%3Alinks&include_entities=1", result_type: "recent" ).take(8).collect
