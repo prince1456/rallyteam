@@ -3,10 +3,10 @@ class HomeController < ApplicationController
     hashtag = ["love", 'cat', 'dog', 'kiss', 'flower', 'vancouver', 'hiking']
     @fave = Favtweet.new
     client = Twitter::REST::Client.new do |config|
-      config.consumer_key        = 'fafaf'
-      config.consumer_secret     = 'VRZK4RAz9z6n5awvJPoDia4tMLzmNGo4BbWKUoKqqX'
-      config.access_token        = '314297qYL9knmJCP7HpIyh6HNk8IhnEAym6cSXk'
-      config.access_token_secret = 'OK9h4NtxSvLtlcUW4Fw0AmeSpWlKbAsuBrRtwm1z'
+      config.consumer_key        = 'L4T4aeAjSGPdpZcXRxx5cx7F6'
+      config.consumer_secret     = 'VRZK4RAz9z6n5awvTyzfJKgCJPoDia4tMLzmNGo4BbWKUoKqqX'
+      config.access_token        = '3142978772-AdkoNdqYL9knmJCP7HpIyh6HNk8IhnEAym6cSXk'
+      config.access_token_secret = 'OK9h4NtxSvLtlcUW46RAurFw0AmeSpWlKbAsuBrRtwm1z'
     end
     if params[:search]
       @twitts = client.search("#{params[:search]} -rtfilter%3Alinks&include_entities=1",lang: "en", result_type: params[:result] ).take(params[:number].to_i).collect

@@ -34,21 +34,37 @@ nav {
 }
 
 .main-nav {
-  flex-direction: row;
+  margin-bottom: 0px;
+  height: 80px;
   display: flex;
-  flex: 2;
+  flex-direction: row;
   list-style-type: none;
-  justify-content: space-around;
+  align-items: center;
+
 }
 
 .main-nav li {
-  /*justify-content: space-between;*/
+  margin-right: 25px;
+  align-items: center;
+  padding-top: 25px;
+  height: 56px;
+  transition: border-bottom .4s ease;
+  // height: 40px;
+}
+.main-nav li:hover {
+  // width: 80%;
+  color: #aaa;
+  border-bottom: 5px solid #00BB98;
+  // height: 40px;
 }
 
 .main-nav li a {
   text-decoration: none;
   color: darkgrey;
+  border-bottom: none;
+
 }
+
 
 .last-nav-element {
   justify-content: flex-end;
@@ -74,6 +90,7 @@ nav {
 }
 
 .second-nav li button {
+  border-radius: 5px;
   border: 2px solid black;
   background-color: white;
   width: 100px;
@@ -143,7 +160,7 @@ header {
 
 }
 .active{
-  width: 80%;
+  font-weight: 600;
   border-bottom: 5px solid #00BB98;
 }
 .hr {
@@ -181,6 +198,11 @@ article {
   margin-right: 0px;
   font-size: 14px
 }
+.checkbox:checked:before {
+	background: #00BC98;
+	content: '\2714';
+	color: #fff;
+}
 .sidebar form select {
   width: 100%;
   height: 34px;
@@ -203,10 +225,20 @@ article {
   padding: 5px
 }
 .sidebar-buttom {
+  background-color: transparent;
   height: 40px;
   width: 40%;
+  font-size: 14px;
   align-self: flex-end;
   border-radius: 5px;
+  transition: 1s ease;
+}
+.sidebar-buttom:hover{
+  background-color: #00BC98;
+  color: white;
+  transition: 1s ease;
+  font-size: 16px;
+  width: 50%;
 }
 
 .column {
@@ -249,8 +281,123 @@ article {
   background-color: #F8A500;
   position: absolute;
    top: 9px;
-   left: 19px;
+   left: 5px;
    width: 40%;
    height: 20px;
    border-radius: 30px
+}
+
+section{
+  color: #A8A8A8;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  background-color: white;
+  width: 70vw;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+}
+ section form input[type=text] {
+  width: 100%;
+  padding-right: 5px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  padding: 8px 0px 8px 10px;
+  margin-right: 0px;
+  font-size: 14px
+}
+ section form input[type=checkbox] {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+section form label{
+  padding-bottom: 10px;
+}
+section form textarea{
+  padding-left: 20px;
+  padding-top: 20px;
+  color: #A8A8A8;
+}
+.buttom-footer button {
+  background-color: transparent;
+  height: 40px;
+  width: 150px;
+  font-size: 14px;
+  align-self: flex-end;
+  border-radius: 5px;
+  transition: 1s ease;
+}
+.buttom-footer button:hover{
+  background-color: #00BC98;
+  color: white;
+  transition: 1s ease;
+  font-size: 16px;
+  width: 200px;
+}
+
+.post-top{
+  width: 100%;
+  text-align: center;
+  flex: 1;
+  background-color: skyblue;
+  padding-bottom: 20px;
+}
+.post-form{
+  padding-top: 40px;
+  padding-bottom: 100px;
+  flex:5;
+  width:85%;
+}
+.post-top h3{
+  color: white;
+  font-size: 30px;
+  font-weight: 500
+}
+.post-top-p{
+  color: white;
+  font-size: 18px;
+  font-weight: 500
+}
+.spann{
+  color: black;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline-block;
+  width: 35px;
+
+  background-color: white;
+
+}
+
+.flex-row{
+  padding-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.flex-column{
+  margin-right: 5px;
+  padding-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.first-row{
+  width: 100%;
+  justify-content: space-around;
+}
+.text-area-form{
+  width: 100%;
+  height: 200px;
+}
+.buttom-footer{
+  justify-content: flex-end;
 }
