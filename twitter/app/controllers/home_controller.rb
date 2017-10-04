@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+    @fave = Favtweet.new
     client = Twitter::REST::Client.new do |config|
       config.consumer_key        = 'L4T4aeAjSGPdpZcXRxx5cx7F6'
       config.consumer_secret     = 'VRZK4RAz9z6n5awvTyzfJKgCJPoDia4tMLzmNGo4BbWKUoKqqX'
@@ -7,9 +8,9 @@ class HomeController < ApplicationController
       config.access_token_secret = 'OK9h4NtxSvLtlcUW46RAurFw0AmeSpWlKbAsuBrRtwm1z'
     end
     if params[:search]
-      @twitts = client.search("#{params[:search]} -rtfilter%3Alinks&include_entities=1", result_type: "recent" ).take(8).collect
+      @twitts = client.search("#{params[:search]} -rtfilter%3Alinks&include_entities=1",lang: "en", result_type: params[:result] ).take(params[:number].to_i).collect
   else
-    @twitts = client.search("#dog -rtfilter%3Alinks&include_entities=1", result_type: "recent" ).take(8).collect
+    @twitts = client.search("#dog -rtfilter%3Alinks&include_entities=1", result_type: "recent", lang: "en" ).take(8).collect
 
   end
 

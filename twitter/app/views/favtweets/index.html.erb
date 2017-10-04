@@ -1,0 +1,27 @@
+<header>
+  
+  <div class="header-nav">
+    <ul></ul>
+  </div>
+
+</header>
+<article>
+  <div class="content">
+    <% @tweets.each do |twitt| %>
+      <div class="column">
+        <div class="content-image">
+            <%= image_tag twitt.image, class: "twitter-image" %>
+          <%# byebug %>
+          <span><%= twitt.screen_name %></span>
+        </div>
+        <h4><%= twitt.text.first(70) %></h4>
+        <ul style="align-self: flex-end;">
+          <li><i class="fa fa-users" aria-hidden="true"></i></i>Followers: <%= twitt.followers%></li>
+          <li><i class="fa fa-user" aria-hidden="true"></i></i>Screen Name: <%= twitt.screen_name %></li>
+          <li><i class="fa fa-calendar-o" aria-hidden="true"></i><%= twitt.date %></li>
+        </ul>
+      </div>
+      <%#= debug(twitt) %>
+    <% end %>
+  </div>
+</article>

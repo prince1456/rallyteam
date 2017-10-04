@@ -93,7 +93,18 @@ header {
   border-bottom: 3px solid darkgrey;
   margin-bottom: 30px
 }
-
+header form select {
+  width: 11%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  height: 45px;
+  padding: 12px 20px 12px 40px;
+  margin-right: 0px;
+  font-size: 14px
+}
 .header-form {
   padding: 15px;
   width: 100%;
@@ -101,7 +112,7 @@ header {
 }
 
 .header-form input[type=text] {
-  width: 80%;
+  width: 58%;
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
@@ -110,6 +121,17 @@ header {
   padding: 12px 20px 12px 40px;
   margin-right: 0px
 }
+.header-form input[type=number] {
+  width: 10%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  padding: 12px 20px 12px 10px;
+  margin-right: 0px
+}
+
 
 .header-form-buttom {
   border-radius: 4px;
@@ -135,13 +157,13 @@ header {
   flex-direction: row;
   list-style-type: none;
   margin-bottom: 0px;
-  height: 50px;
+  height: 40px;
 }
 
 .header-nav ul li {
   text-align: center;
   color: darkgray;
-  font-size: 25px;
+  font-size: 20px;
   margin-right: 50px
 
 }
@@ -216,7 +238,7 @@ article {
   flex-grow: 1;
   background-color: white;
   margin: 5px;
-  flex: 1 210px
+  flex: 1 250px
 
 }
 .column h4{
@@ -234,6 +256,7 @@ article {
 }
 .column ul li {
   padding-top: 3px;
+  font-size: 12px;
 }
 .column ul li .fa{
   padding-right: 10px;
@@ -265,4 +288,20 @@ article {
 }
 .twitter-image{
 
+}
+
+.new_post_submit{
+  background-color: transparent;
+  border: none;
+}
+@media screen and (max-width: 699px){
+
+  .main-nav li{
+    padding-right: 20px
+  }
+}
+@media screen and (max-width: 920px){
+  article {
+      flex-direction: column;
+  }
 }

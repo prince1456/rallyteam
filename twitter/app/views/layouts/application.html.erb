@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +11,35 @@
   </head>
 
   <body>
+    <nav>
+      <div class="logo">
+        <h2>See <span>Tweets</span></h2>
+      </div>
+      <div class="navigation-container">
+        <ul class="main-nav">
+          <li><%= link_to "HOME", root_path %></li>
+          <% if user_signed_in? %>
+              <li>
+                <li><%= link_to "MY FAVORITE TWEETS", favtweets_path %></li>
+              <%= link_to('LOGOUT', destroy_user_session_path, method: :delete) %>
+              </li>
+            <% else %>
+              <li><%= link_to('LOGIN', new_user_session_path)  %> </li>
+              <li><%= link_to "REGISTER", new_user_registration_path %></li>
+              </li>
+            <% end %>
+        </ul>
+      </div>
+      <div class="last-nav-element">
+        <ul class="second-nav">
+          <li><%= link_to "" do  %>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <% end %>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>

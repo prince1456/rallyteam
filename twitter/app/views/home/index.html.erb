@@ -1,79 +1,20 @@
 
-  <nav>
-    <div class="logo">
-      <h2>your <span>logo</span></h2>
-    </div>
-    <div class="navigation-container">
-      <ul class="main-nav">
-        <li><a href="#"> MARKETPLACE</a></li>
-        <li><a href="#"> DIRECTORY</a></li>
-        <li><a href="#"> MY WORKPLACE</a></li>
-      </ul>
-    </div>
-    <div class="last-nav-element">
-      <ul class="second-nav">
-        <li><button>Create</button></li>
-        <li><i class="fa fa-bell" aria-hidden="true"></i></li>
-        <li><i class="fa fa-commenting" aria-hidden="true"></i></li>
-        <li><i class="fa fa-user-circle-o" aria-hidden="true"></i></li>
-      </ul>
-    </div>
-  </nav>
   <header>
     <div class="header-form">
       <%= form_tag(root_path, :method => "get", id: "search-hashtag") do %>
-      <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
-      <%= submit_tag "Search", class:"header-form-buttom"%>
+          <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+          <%= number_field_tag :number, params[:number], placeholder: "# tweet", value: 8%>
+          <%= select_tag :result, "<option selected='selected'>recent</option><option>popular</option>".html_safe %>
+          <%= submit_tag "Search", class:"header-form-buttom"%>
       <% end %>
       </form>
     </div>
     <div class="header-nav">
-      <ul>
-        <li class="active">PROJECTS</li>
-        <li>JOBS</li>
-      </ul>
+      <ul></ul>
     </div>
 
   </header>
   <article>
-    <div class="sidebar">
-      <h2>Filters</h2>
-      <form action="">
-        <label for="">Show Me</label>
-        <select class="" name="">
-            <option value="" selected>All Open Projects</option>
-            <option value="">something</option>
-            <option value="">something2</option>
-          </select>
-        <label for="">Category</label>
-        <select class="" name="">
-            <option value="">All Categories</option>
-            <option value="">something</option>
-            <option value="">something2</option>
-          </select>
-        <label for="">All Projects</label>
-        <select class="" name="">
-            <option value="">All Projects</option>
-            <option value="">something2</option>
-            <option value="">something2</option>
-          </select>
-        <label for="">LOCATION</label>
-        <input type="text" name="" id="" placeholder="Enter Location">
-        <label for="">Staffing Need</label>
-        <div>
-          <input type="checkbox" name="" value=""> On Site
-        </div>
-        <div>
-          <input type="checkbox" name="" value="" checked> Remote
-        </div>
-        <label for="">Hours Per week</label>
-        <select class="" name="" placeholder="Select">
-            <option value="">something</option>
-            <option value="">something2</option>
-          </select>
-        <button class="sidebar-buttom"> Reset</button>
-      </form>
-    </div>
     <div class="content">
       <% @twitts.each do |twitt| %>
         <div class="column">
@@ -84,12 +25,33 @@
               <%= image_tag twitt.user.profile_image_url, class: "twitter-image" %>
             <% end %>
             <%# byebug %>
-            <span><%= twitt.user.screen_name %></span>
+            <span><%= twitt.user.name %></span>
           </div>
           <h4><%= twitt.text.first(70) %></h4>
-          <ul>
+          <ul style="align-self: flex-end;">
+            <% if Favtweet.exists?(tweets: twitt.id) %>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <% else %>
+              <%= form_for @fave do |f| %>
+                <% if twitt.media.any? %>
+                  <%= f.hidden_field :image, value: twitt.media[0].media_url %>
+                <% else %>
+                  <%= f.hidden_field :image, value: twitt.user.profile_image_url %>
+                <% end %>
+                  <%= f.hidden_field :screen_name, value: twitt.user.screen_name %>
+                  <%= f.hidden_field :text, value: twitt.text %>
+                  <%= f.hidden_field :followers, value: twitt.user.followers_count %>
+                  <%= f.hidden_field :name, value: twitt.user.name %>
+                  <%= f.hidden_field :date, value: twitt.created_at %>
+                  <%= f.hidden_field :tweets, value: twitt.id %>
+                  <%= button_tag(type: "submit", class: "new_post_submit") do %>
+                      <span><i class="fa fa-star-o" aria-hidden="true"></i></span>
+                <% end %>
+              <% end %>
+            <% end %>
             <li><i class="fa fa-users" aria-hidden="true"></i></i>Followers: <%= twitt.user.followers_count %></li>
-            <li><i class="fa fa-hashtag" aria-hidden="true"></i></i><%= twitt.hashtags[0].text %></li>
+            <li><i class="fa fa-user" aria-hidden="true"></i></i>Screen Name: <%= twitt.user.screen_name %></li>
+            <li><i class="fa fa-calendar-o" aria-hidden="true"></i><%= twitt.created_at.strftime("%F %R") %></li>
           </ul>
         </div>
         <%#= debug(twitt) %>
