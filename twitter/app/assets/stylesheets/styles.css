@@ -179,7 +179,7 @@ header form select {
 article {
   display: flex;
   flex-direction: row;
-  width: 80vw;
+  width: 80%;
   flex-wrap: wrap;
 }
 .sidebar {
@@ -318,4 +318,8 @@ article {
   .header-form-buttom {
     width: 30%
   }
+  .second-nav{
+    display: none
+  }
+
 }
