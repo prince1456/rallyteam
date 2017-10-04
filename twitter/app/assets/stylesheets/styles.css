@@ -304,4 +304,18 @@ article {
   article {
       flex-direction: column;
   }
+  .header-form input[type=text] {
+    width: 100%;
+  }
+  .header-form input[type=number] {
+    width: 33%;
+
+  }
+  header form select {
+    width: 33%;
+
+  }
+  .header-form-buttom {
+    width: 30%
+  }
 }
